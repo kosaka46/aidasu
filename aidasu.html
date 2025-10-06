@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>トモコレ風 相性診断ゲーム</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <h1>トモコレ風 相性診断メーカー</h1>
+
+    <div class="game-container">
+        
+        <div id="compatibility-output" class="speech-bubble">
+            アバターをカスタムして「相性診断」を押してください。
+        </div>
+
+        <div class="controls">
+            <button onclick="diagnoseCompatibility()"> 2人の相性診断！ </button>
+            <button onclick="sayRandomWord()"> ランダムひとこと</button>
+        </div>
+
+        <div class="avatars-duo">
+            
+            <div class="avatar-unit">
+                <div class="input-group">
+                    <label for="input-name-A">名前A：</label>
+                    <input type="text" id="input-name-A" value="アバター太郎" onchange="updateName('A')">
+                </div>
+                <div class="input-group">
+                    <label for="hair-select-A">髪型A：</label>
+                    <select id="hair-select-A" onchange="updateHair('A')"></select>
+                </div>
+                
+                <div class="avatar-area">
+                    <div id="face-A" class="face"></div>
+                    <div id="eyes-A" class="eyes"></div>
+                    <div id="mouth-A" class="mouth"></div>
+                    <div id="hair-A" class="hair"></div>
+                </div>
+                <p id="name-output-A" class="name-tag"></p>
+                <div id="word-output-A" class="speech-bubble">...</div>
+            </div>
+
+            <div class="avatar-unit">
+                <div class="input-group">
+                    <label for="input-name-B">名前B：</label>
+                    <input type="text" id="input-name-B" value="ジェミニ花子" onchange="updateName('B')">
+                </div>
+                <div class="input-group">
+                    <label for="hair-select-B">髪型B：</label>
+                    <select id="hair-select-B" onchange="updateHair('B')"></select>
+                </div>
+                
+                <div class="avatar-area">
+                    <div id="face-B" class="face"></div>
+                    <div id="eyes-B" class="eyes"></div>
+                    <div id="mouth-B" class="mouth"></div>
+                    <div id="hair-B" class="hair"></div>
+                </div>
+                <p id="name-output-B" class="name-tag"></p>
+                <div id="word-output-B" class="speech-bubble">...</div>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
