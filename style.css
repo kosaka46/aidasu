@@ -1,0 +1,117 @@
+/* 基本スタイル */
+body {
+    font-family: sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+.game-container {
+    max-width: 300px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* --- アバターエリア --- */
+.avatar-area {
+    width: 200px;
+    height: 200px;
+    margin: 20px auto 10px;
+    position: relative;
+}
+
+/* 顔の輪郭 */
+.face {
+    width: 150px;
+    height: 150px;
+    background-color: #ffe0bd; /* 肌色 */
+    border: 3px solid #333;
+    border-radius: 50%;
+    position: absolute;
+    top: 30px;
+    left: 25px;
+    z-index: 10;
+}
+
+/* 目 */
+.eyes {
+    width: 10px;
+    height: 10px;
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 75px;
+    left: 65px;
+    z-index: 20;
+    box-shadow: 60px 0 0 black; /* 右目 */
+}
+
+/* 口 */
+.mouth {
+    width: 30px;
+    height: 5px;
+    background-color: #333;
+    border-radius: 0 0 10px 10px;
+    position: absolute;
+    top: 110px;
+    left: 85px;
+    z-index: 20;
+}
+
+/* 髪型 (JavaScriptでスタイルが変わります) */
+.hair {
+    width: 160px;
+    height: 80px;
+    background-color: #333; /* 初期色 */
+    position: absolute;
+    top: 0;
+    left: 20px;
+    z-index: 30;
+}
+
+/* --- UIとテキスト --- */
+.speech-bubble {
+    background-color: #e0f7fa;
+    border: 2px solid #00bcd4;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+    min-height: 20px;
+}
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: #00bcd4 transparent transparent transparent;
+}
+.name-tag {
+    font-weight: bold;
+    color: #333;
+    margin-top: 5px;
+    font-size: 1.1em;
+}
+
+.controls {
+    margin-top: 20px;
+    text-align: left;
+}
+.input-group {
+    margin-bottom: 10px;
+}
+.controls button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 10px;
+}
